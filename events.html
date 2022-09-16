@@ -1,5 +1,8 @@
+{% load static %}
+{% static "images" as baseURL %}
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -9,388 +12,542 @@
     <link rel="stylesheet" href="https://unpkg.com/flowbite@1.5.2/dist/flowbite.min.css" />
     <title>Events</title>
 </head>
+
 <body>
-        <!-- Navbar -->
-        <nav class="relative container mx-auto p-2">
-            <!-- Container -->
-            <div class="flex items-center justify-between">
-                <!-- CSI logo -->
-                <div class="flex flex-row space-x-10 pt-2 pl-8">
-                    <a href="index.html">
+    <!-- Navbar -->
+    <nav class="relative container mx-auto p-2">
+        <!-- Container -->
+        <div class="flex items-center justify-between">
+            <!-- CSI logo -->
+            <div class="flex flex-row space-x-10 pt-2 pl-8">
+                <a href="/">
                     <img src="./static/images/CSI_logo.png" alt="" style="width: 95px; height: 96px">
-                    </a>
-                    <a href="https://www.mmcoe.edu.in/" target="_blank">
+                </a>
+                <a href="https://www.mmcoe.edu.in/" target="_blank">
                     <img src="./static/images/mmcoe_logo-2.png" alt="">
-                    </a>
-                </div>
-                <!-- Menu items -->
-                <div class="hidden md:flex space-x-12 pr-10">
-      <!-- <<<<<<< HEAD -->
-                    <a href="index.html" class="navlinks">Home</a>
-                    <a href="about.html" class="navlinks">About</a>
-                    <a href="events.html" class="navlinks">Events</a>
-                    <a href="current_event.html" class="navlinks">Special Event</a>
-                    <a href="contact.html" class="navlinks">Contact Us</a>
-      <!-- >>>>>>> 5cea7fa99dec351fa330556d22645cc859fe988d -->
-                </div>
-      
-                <button
-              id="menu-btn"
-              class="block hamburger md:hidden focus:outline-none"
-            >
-              <span class="hamburger-top"></span>
-              <span class="hamburger-middle"></span>
-              <span class="hamburger-bottom"></span>
+                </a>
+            </div>
+            <!-- Menu items -->
+            <div class="hidden md:flex space-x-12 pr-10">
+                <!-- <<<<<<< HEAD -->
+                <a href="/" class="navlinks">Home</a>
+                <a href="about" class="navlinks">About</a>
+                <a href="events" class="navlinks">Events</a>
+                <a href="current_event" class="navlinks">Special Event</a>
+                <a href="contact" class="navlinks">Contact Us</a>
+                <!-- >>>>>>> 5cea7fa99dec351fa330556d22645cc859fe988d -->
+            </div>
+
+            <button id="menu-btn" class="block hamburger md:hidden focus:outline-none">
+                <span class="hamburger-top"></span>
+                <span class="hamburger-middle"></span>
+                <span class="hamburger-bottom"></span>
             </button>
+        </div>
+        <!-- Mobile Menu -->
+        <div class="md:hidden" style="position:relative; z-index: 999;">
+            <div id="menu"
+                class="absolute flex-col items-center hidden self-end py-8 mt-10 space-y-6 font-bold bg-white sm:w-auto sm:self-center left-6 right-6 drop-shadow-md">
+                <a href="/" class="navlinks">Home</a>
+                <a href="about" class="navlinks">About</a>
+                <a href="events" class="navlinks">Event</a>
+                <a href="current_event" class="navlinks">Special Event</a>
+                <a href="contact" class="navlinks">Contact Us</a>
             </div>
-                  <!-- Mobile Menu -->
-          <div class="md:hidden" style="position:relative; z-index: 999;">
-            <div
-              id="menu"
-              class="absolute flex-col items-center hidden self-end py-8 mt-10 space-y-6 font-bold bg-white sm:w-auto sm:self-center left-6 right-6 drop-shadow-md"
-            >
-            <a href="index.html" class="navlinks">Home</a>
-            <a href="about.html" class="navlinks">About</a>
-            <a href="events.html" class="navlinks">Event</a>
-            <a href="current_event.html" class="navlinks">Special Event</a>
-            <a href="contact.html" class="navlinks">Contact Us</a>
-            </div>
-          </div>
-        </nav>
+        </div>
+    </nav>
 
-        <div id="text_header" class="text-4xl text-center mt-20" style="color: #3792A9;">Events</div>        
-
-<section class="event1">
-<div class="container mt-24 mx-auto">
-<div id="default-carousel" class="relative" data-carousel="static">
-    <!-- Carousel wrapper -->
-    <div class="relative h-56 overflow-hidden hover:overflow-visible rounded-lg md:h-96">
-         <!-- Item 1 -->
-        <div class="duration-700 ease-in-out absolute inset-0 transition-all transform translate-x-0 z-20" data-carousel-item="">
-            <span class="absolute text-2xl font-semibold text-black -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2 sm:text-3xl dark:text-gray-800">First Slide</span>
-            <img src="./static/images/mania1.jpg" class="absolute block w-auto -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
-        </div>
-        <!-- Item 2 -->
-        <div class="duration-700 ease-in-out absolute inset-0 transition-all transform translate-x-full z-10" data-carousel-item="">
-            <span class="absolute text-2xl font-semibold text-black -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2 sm:text-3xl dark:text-gray-800">Second Slide</span>
-            <img src="./static/images/mania2.jpg" class="absolute block w-auto -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
-        </div>
-        <!-- Item 3 -->
-        <div class="duration-700 ease-in-out absolute inset-0 transition-all transform -translate-x-full z-10" data-carousel-item="">
-            <span class="absolute text-2xl font-semibold text-black -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2 sm:text-3xl dark:text-gray-800">Third Slide</span>
-            <img src="./static/images/mania3.jpg" class="absolute block w-auto -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
-        </div>
-    </div>
-    <!-- Slider indicators -->
-    <div class="absolute z-30 flex space-x-3 -translate-x-1/2 bottom-5 left-1/2">
-        <button type="button" class="w-3 h-3 rounded-full bg-black dark:bg-gray-800" aria-current="true" aria-label="Slide 1" data-carousel-slide-to="0"></button>
-        <button type="button" class="w-3 h-3 rounded-full bg-black/50 dark:bg-gray-800/50 hover:bg-black dark:hover:bg-gray-800" aria-current="false" aria-label="Slide 2" data-carousel-slide-to="1"></button>
-        <button type="button" class="w-3 h-3 rounded-full bg-black/50 dark:bg-gray-800/50 hover:bg-black dark:hover:bg-gray-800" aria-current="false" aria-label="Slide 3" data-carousel-slide-to="2"></button>
-    </div>
-    <!-- Slider controls -->
-    <button type="button" class="absolute top-0 left-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none" data-carousel-prev="">
-        <span class="inline-flex items-center justify-center w-8 h-8 rounded-full sm:w-10 sm:h-10 bg-black/30 dark:bg-gray-800/30 group-hover:bg-black/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-black dark:group-focus:ring-gray-800/70 group-focus:outline-none">
-            <svg aria-hidden="true" class="w-5 h-5 text-black sm:w-6 sm:h-6 dark:text-gray-800" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path></svg>
-            <span class="sr-only">Previous</span>
-        </span>
-    </button>
-    <button type="button" class="absolute top-0 right-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none" data-carousel-next="">
-        <span class="inline-flex items-center justify-center w-8 h-8 rounded-full sm:w-10 sm:h-10 bg-black/30 dark:bg-gray-800/30 group-hover:bg-black/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-black dark:group-focus:ring-gray-800/70 group-focus:outline-none">
-            <svg aria-hidden="true" class="w-5 h-5 text-black sm:w-6 sm:h-6 dark:text-gray-800" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
-            <span class="sr-only">Next</span>
-        </span>
-    </button>
-</div>
-<h1 style="color: black; text-align: center;" class="mt-8 text-xl">Code Mania 2.0 – A 2 Day National Championship</h1>
-<p class="max-w-full text-2xl text-center text-gray-700 md:text-center pt-1 pr-2 pb-14 event-info mt-8 px-10">
-    <span>
-        Code Mania 2.0 was one of the leading national events organized by the CSI Chapter, MMCOE
-        which bagged a huge response with more than 130 students participating from 10 states of India. <br>
-        It was a 3 round event which was conducted on Hackerrank. <br>
-        The participants showed their skills with great enthusiasm with alluring prizes awaiting them.
-    </span>
-</p>
-</div>
-</section>
-
-<section class="event1">
-    <div class="container mt-24 mx-auto">
-    <div id="default-carousel" class="relative" data-carousel="static">
-        <!-- Carousel wrapper -->
-        <!-- <div class="relative h-56 overflow-hidden rounded-lg md:h-96"> -->
-        <div class="relative h-56 overflow-hidden hover:overflow-visible rounded-lg md:h-96">
-             <!-- Item 1 -->
-            <div class="duration-700 ease-in-out absolute inset-0 transition-all transform translate-x-0 z-20" data-carousel-item="">
-                <span class="absolute text-2xl font-semibold text-black -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2 sm:text-3xl dark:text-gray-800">First Slide</span>
-                <img src="./static/images/cuda1.png" class="absolute block w-auto -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
-            </div>
-            <!-- Item 2 -->
-            <div class="duration-700 ease-in-out absolute inset-0 transition-all transform translate-x-full z-10" data-carousel-item="">
-                <span class="absolute text-2xl font-semibold text-black -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2 sm:text-3xl dark:text-gray-800">Second Slide</span>
-                <img src="./static/images/cuda2.png" class="absolute block w-auto -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
-            </div>
-            <!-- Item 3 -->
-            <div class="duration-700 ease-in-out absolute inset-0 transition-all transform -translate-x-full z-10" data-carousel-item="">
-                <span class="absolute text-2xl font-semibold text-black -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2 sm:text-3xl dark:text-gray-800">Third Slide</span>
-                <img src="./static/images/cuda3.png" class="absolute block w-auto -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
-            </div>
-        </div>
-        <!-- Slider indicators -->
-        <div class="absolute z-30 flex space-x-3 -translate-x-1/2 bottom-5 left-1/2">
-            <button type="button" class="w-3 h-3 rounded-full bg-black dark:bg-gray-800" aria-current="true" aria-label="Slide 1" data-carousel-slide-to="0"></button>
-            <button type="button" class="w-3 h-3 rounded-full bg-black/50 dark:bg-gray-800/50 hover:bg-black dark:hover:bg-gray-800" aria-current="false" aria-label="Slide 2" data-carousel-slide-to="1"></button>
-            <button type="button" class="w-3 h-3 rounded-full bg-black/50 dark:bg-gray-800/50 hover:bg-black dark:hover:bg-gray-800" aria-current="false" aria-label="Slide 3" data-carousel-slide-to="2"></button>
-        </div>
-        <!-- Slider controls -->
-        <button type="button" class="absolute top-0 left-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none" data-carousel-prev="">
-            <span class="inline-flex items-center justify-center w-8 h-8 rounded-full sm:w-10 sm:h-10 bg-black/30 dark:bg-gray-800/30 group-hover:bg-black/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-black dark:group-focus:ring-gray-800/70 group-focus:outline-none">
-                <svg aria-hidden="true" class="w-5 h-5 text-black sm:w-6 sm:h-6 dark:text-gray-800" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path></svg>
-                <span class="sr-only">Previous</span>
-            </span>
-        </button>
-        <button type="button" class="absolute top-0 right-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none" data-carousel-next="">
-            <span class="inline-flex items-center justify-center w-8 h-8 rounded-full sm:w-10 sm:h-10 bg-black/30 dark:bg-gray-800/30 group-hover:bg-black/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-black dark:group-focus:ring-gray-800/70 group-focus:outline-none">
-                <svg aria-hidden="true" class="w-5 h-5 text-black sm:w-6 sm:h-6 dark:text-gray-800" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
-                <span class="sr-only">Next</span>
-            </span>
-        </button>
-    </div>
-    <h1 style="color: black; text-align: center;" class="mt-8 text-xl">Workshop on CUDA Programming</h1>
-    <p class="max-w-full text-2xl text-center text-gray-700 md:text-center pt-1 pr-2 pb-14 event-info mt-8 px-10">
-        <span>
-            This workshop was also one of the flagship events for us. <br>
-            It entailed a lecture on the basics of CUDA programming 
-            and the basics of language extensions in it. <br> We consider this workshop to be a 
-            massive success with 122 students actively participating in it. 
-            
-        </span>
-    </p>
-    </div>
-    </section>
+    <div id="text_header" class="text-4xl text-center mt-20" style="color: #3792A9;">Events</div>
 
     <section class="event1">
         <div class="container mt-24 mx-auto">
-        <div id="default-carousel" class="relative" data-carousel="static">
-            <!-- Carousel wrapper -->
-            <div class="relative h-56 overflow-hidden hover:overflow-visible rounded-lg md:h-96">
-                <!-- Item 1 -->
-               <div class="duration-700 ease-in-out absolute inset-0 transition-all transform translate-x-0 z-20" data-carousel-item="">
-                   <span class="absolute text-2xl font-semibold text-black -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2 sm:text-3xl dark:text-gray-800">First Slide</span>
-                   <img src="./static/images/fullstack1.jpg" class="absolute block w-auto -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
-               </div>
-               <!-- Item 2 -->
-               <div class="duration-700 ease-in-out absolute inset-0 transition-all transform translate-x-full z-10" data-carousel-item="">
-                   <span class="absolute text-2xl font-semibold text-black -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2 sm:text-3xl dark:text-gray-800">Second Slide</span>
-                   <img src="./static/images/fullstack2.jpg" class="absolute block w-auto -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
-               </div>
-               <!-- Item 3 -->
-               <div class="duration-700 ease-in-out absolute inset-0 transition-all transform -translate-x-full z-10" data-carousel-item="">
-                   <span class="absolute text-2xl font-semibold text-black -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2 sm:text-3xl dark:text-gray-800">Third Slide</span>
-                   <img src="./static/images/fullstack3.jpg" class="absolute block w-auto -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
-               </div>
-           </div>
-            <!-- Slider indicators -->
-            <div class="absolute z-30 flex space-x-3 -translate-x-1/2 bottom-5 left-1/2">
-                <button type="button" class="w-3 h-3 rounded-full bg-black dark:bg-gray-800" aria-current="true" aria-label="Slide 1" data-carousel-slide-to="0"></button>
-                <button type="button" class="w-3 h-3 rounded-full bg-black/50 dark:bg-gray-800/50 hover:bg-black dark:hover:bg-gray-800" aria-current="false" aria-label="Slide 2" data-carousel-slide-to="1"></button>
-                <button type="button" class="w-3 h-3 rounded-full bg-black/50 dark:bg-gray-800/50 hover:bg-black dark:hover:bg-gray-800" aria-current="false" aria-label="Slide 3" data-carousel-slide-to="2"></button>
-            </div>
-            <!-- Slider controls -->
-            <button type="button" class="absolute top-0 left-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none" data-carousel-prev="">
-                <span class="inline-flex items-center justify-center w-8 h-8 rounded-full sm:w-10 sm:h-10 bg-black/30 dark:bg-gray-800/30 group-hover:bg-black/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-black dark:group-focus:ring-gray-800/70 group-focus:outline-none">
-                    <svg aria-hidden="true" class="w-5 h-5 text-black sm:w-6 sm:h-6 dark:text-gray-800" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path></svg>
-                    <span class="sr-only">Previous</span>
-                </span>
-            </button>
-            <button type="button" class="absolute top-0 right-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none" data-carousel-next="">
-                <span class="inline-flex items-center justify-center w-8 h-8 rounded-full sm:w-10 sm:h-10 bg-black/30 dark:bg-gray-800/30 group-hover:bg-black/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-black dark:group-focus:ring-gray-800/70 group-focus:outline-none">
-                    <svg aria-hidden="true" class="w-5 h-5 text-black sm:w-6 sm:h-6 dark:text-gray-800" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
-                    <span class="sr-only">Next</span>
-                </span>
-            </button>
-        </div>
-        <h1 style="color: black; text-align: center;" class="mt-8 text-xl">Seminar on Full Stack Web 3 Development</h1>
-        <p class="max-w-full text-2xl text-center text-gray-700 md:text-center pt-1 pr-2 pb-14 event-info mt-8 px-10">
-            <span>
-
-                With the exponential rise in the number of websites for different purposes, 
-                this particular domain is booming like never before. <br>
-                A full stack developer is the back-bone of web development. <br>
-                Through this seminar, students were made acquainted with the basics, 
-                latest technologies and skills in web development. 
-                
-                </span>
-        </p>
-        </div>
-        </section>
-
-        <section class="event1">
-            <div class="container mt-24 mx-auto">
             <div id="default-carousel" class="relative" data-carousel="static">
                 <!-- Carousel wrapper -->
-                <div class="relative h-56 overflow-hidden hover:overflow-visible rounded-lg md:h-96">
+                <div class="relative h-56 overflow-hidden rounded-lg md:h-96">
                     <!-- Item 1 -->
-                   <div class="duration-700 ease-in-out absolute inset-0 transition-all transform translate-x-0 z-20" data-carousel-item="">
-                       <span class="absolute text-2xl font-semibold text-black -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2 sm:text-3xl dark:text-gray-800">First Slide</span>
-                       <img src="./static/images/cyber1.png" class="absolute block w-auto -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
-                   </div>
-                   <!-- Item 2 -->
-                   <div class="duration-700 ease-in-out absolute inset-0 transition-all transform translate-x-full z-10" data-carousel-item="">
-                       <span class="absolute text-2xl font-semibold text-black -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2 sm:text-3xl dark:text-gray-800">Second Slide</span>
-                       <img src="./static/images/cyber2.png" class="absolute block w-auto -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
-                   </div>
-                   <!-- Item 3 -->
-                   <!-- <div class="duration-700 ease-in-out absolute inset-0 transition-all transform -translate-x-full z-10" data-carousel-item="">
-                       <span class="absolute text-2xl font-semibold text-black -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2 sm:text-3xl dark:text-gray-800">Third Slide</span>
-                       <img src="./static/images/fullstack3.jpg" class="absolute block w-auto -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
-                   </div> -->
-               </div>
+                    <div class="duration-700 ease-in-out absolute inset-0 transition-all transform translate-x-0 z-20"
+                        data-carousel-item="">
+                        <span
+                            class="absolute text-2xl font-semibold text-black -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2 sm:text-3xl dark:text-gray-800">First
+                            Slide</span>
+                        <img src="{% static 'images/mania1.jpg' %}"
+                            class="absolute block w-auto -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
+                    </div>
+                    <!-- Item 2 -->
+                    <div class="duration-700 ease-in-out absolute inset-0 transition-all transform translate-x-full z-10"
+                        data-carousel-item="">
+                        <span
+                            class="absolute text-2xl font-semibold text-black -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2 sm:text-3xl dark:text-gray-800">Second
+                            Slide</span>
+                        <img src="{% static 'images/mania2.jpg' %}"
+                            class="absolute block w-auto -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
+                    </div>
+                    <!-- Item 3 -->
+                    <div class="duration-700 ease-in-out absolute inset-0 transition-all transform -translate-x-full z-10"
+                        data-carousel-item="">
+                        <span
+                            class="absolute text-2xl font-semibold text-black -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2 sm:text-3xl dark:text-gray-800">Third
+                            Slide</span>
+                        <img src="{% static 'images/mania3.jpg' %}"
+                            class="absolute block w-auto -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
+                    </div>
+                </div>
                 <!-- Slider indicators -->
                 <div class="absolute z-30 flex space-x-3 -translate-x-1/2 bottom-5 left-1/2">
-                    <button type="button" class="w-3 h-3 rounded-full bg-black dark:bg-gray-800" aria-current="true" aria-label="Slide 1" data-carousel-slide-to="0"></button>
-                    <button type="button" class="w-3 h-3 rounded-full bg-black/50 dark:bg-gray-800/50 hover:bg-black dark:hover:bg-gray-800" aria-current="false" aria-label="Slide 2" data-carousel-slide-to="1"></button>
-                    <!-- <button type="button" class="w-3 h-3 rounded-full bg-black/50 dark:bg-gray-800/50 hover:bg-black dark:hover:bg-gray-800" aria-current="false" aria-label="Slide 3" data-carousel-slide-to="2"></button> -->
+                    <button type="button" class="w-3 h-3 rounded-full bg-black dark:bg-gray-800" aria-current="true"
+                        aria-label="Slide 1" data-carousel-slide-to="0"></button>
+                    <button type="button"
+                        class="w-3 h-3 rounded-full bg-black/50 dark:bg-gray-800/50 hover:bg-black dark:hover:bg-gray-800"
+                        aria-current="false" aria-label="Slide 2" data-carousel-slide-to="1"></button>
+                    <button type="button"
+                        class="w-3 h-3 rounded-full bg-black/50 dark:bg-gray-800/50 hover:bg-black dark:hover:bg-gray-800"
+                        aria-current="false" aria-label="Slide 3" data-carousel-slide-to="2"></button>
                 </div>
                 <!-- Slider controls -->
-                <button type="button" class="absolute top-0 left-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none" data-carousel-prev="">
-                    <span class="inline-flex items-center justify-center w-8 h-8 rounded-full sm:w-10 sm:h-10 bg-black/30 dark:bg-gray-800/30 group-hover:bg-black/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-black dark:group-focus:ring-gray-800/70 group-focus:outline-none">
-                        <svg aria-hidden="true" class="w-5 h-5 text-black sm:w-6 sm:h-6 dark:text-gray-800" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path></svg>
+                <button type="button"
+                    class="absolute top-0 left-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none"
+                    data-carousel-prev="">
+                    <span
+                        class="inline-flex items-center justify-center w-8 h-8 rounded-full sm:w-10 sm:h-10 bg-black/30 dark:bg-gray-800/30 group-hover:bg-black/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-black dark:group-focus:ring-gray-800/70 group-focus:outline-none">
+                        <svg aria-hidden="true" class="w-5 h-5 text-black sm:w-6 sm:h-6 dark:text-gray-800" fill="none"
+                            stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7">
+                            </path>
+                        </svg>
                         <span class="sr-only">Previous</span>
                     </span>
                 </button>
-                <button type="button" class="absolute top-0 right-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none" data-carousel-next="">
-                    <span class="inline-flex items-center justify-center w-8 h-8 rounded-full sm:w-10 sm:h-10 bg-black/30 dark:bg-gray-800/30 group-hover:bg-black/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-black dark:group-focus:ring-gray-800/70 group-focus:outline-none">
-                        <svg aria-hidden="true" class="w-5 h-5 text-black sm:w-6 sm:h-6 dark:text-gray-800" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+                <button type="button"
+                    class="absolute top-0 right-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none"
+                    data-carousel-next="">
+                    <span
+                        class="inline-flex items-center justify-center w-8 h-8 rounded-full sm:w-10 sm:h-10 bg-black/30 dark:bg-gray-800/30 group-hover:bg-black/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-black dark:group-focus:ring-gray-800/70 group-focus:outline-none">
+                        <svg aria-hidden="true" class="w-5 h-5 text-black sm:w-6 sm:h-6 dark:text-gray-800" fill="none"
+                            stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7">
+                            </path>
+                        </svg>
                         <span class="sr-only">Next</span>
                     </span>
                 </button>
             </div>
-            <h1 style="color: black; text-align: center;" class="mt-8 text-xl">Hands-On Workshop on “Cyber Security”</h1>
-            <p class="max-w-full text-2xl text-center text-gray-700 md:text-center pt-1 pr-2 pb-14 event-info mt-8 px-10">
+            <h1 style="color: black; text-align: center;" class="mt-8 text-xl">Code Mania 2.0 – A 2 Day National
+                Championship</h1>
+            <p
+                class="max-w-full text-2xl text-center text-gray-700 md:text-center pt-1 pr-2 pb-14 event-info mt-8 px-10">
+                <span>
+                    Code Mania 2.0 was one of the leading national events organized by the CSI Chapter, MMCOE
+                    which bagged a huge response with more than 130 students participating from 10 states of India. <br>
+                    It was a 3 round event which was conducted on Hackerrank. <br>
+                    The participants showed their skills with great enthusiasm with alluring prizes awaiting them.
+                </span>
+            </p>
+        </div>
+    </section>
+
+    <section class="event1">
+        <div class="container mt-24 mx-auto">
+            <div id="default-carousel" class="relative" data-carousel="static">
+                <!-- Carousel wrapper -->
+                <!-- <div class="relative h-56 overflow-hidden rounded-lg md:h-96"> -->
+                <div class="relative h-56 overflow-hidden rounded-lg md:h-96">
+                    <!-- Item 1 -->
+                    <div class="duration-700 ease-in-out absolute inset-0 transition-all transform translate-x-0 z-20"
+                        data-carousel-item="">
+                        <span
+                            class="absolute text-2xl font-semibold text-black -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2 sm:text-3xl dark:text-gray-800">First
+                            Slide</span>
+                        <img src="{% static 'images/cuda1.png' %}"
+                            class="absolute block w-auto -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
+                    </div>
+                    <!-- Item 2 -->
+                    <div class="duration-700 ease-in-out absolute inset-0 transition-all transform translate-x-full z-10"
+                        data-carousel-item="">
+                        <span
+                            class="absolute text-2xl font-semibold text-black -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2 sm:text-3xl dark:text-gray-800">Second
+                            Slide</span>
+                        <img src="{% static 'images/cuda2.png' %}"
+                            class="absolute block w-auto -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
+                    </div>
+                    <!-- Item 3 -->
+                    <div class="duration-700 ease-in-out absolute inset-0 transition-all transform -translate-x-full z-10"
+                        data-carousel-item="">
+                        <span
+                            class="absolute text-2xl font-semibold text-black -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2 sm:text-3xl dark:text-gray-800">Third
+                            Slide</span>
+                        <img src="{% static 'images/cuda3.png' %}"
+                            class="absolute block w-auto -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
+                    </div>
+                </div>
+                <!-- Slider indicators -->
+                <div class="absolute z-30 flex space-x-3 -translate-x-1/2 bottom-5 left-1/2">
+                    <button type="button" class="w-3 h-3 rounded-full bg-black dark:bg-gray-800" aria-current="true"
+                        aria-label="Slide 1" data-carousel-slide-to="0"></button>
+                    <button type="button"
+                        class="w-3 h-3 rounded-full bg-black/50 dark:bg-gray-800/50 hover:bg-black dark:hover:bg-gray-800"
+                        aria-current="false" aria-label="Slide 2" data-carousel-slide-to="1"></button>
+                    <button type="button"
+                        class="w-3 h-3 rounded-full bg-black/50 dark:bg-gray-800/50 hover:bg-black dark:hover:bg-gray-800"
+                        aria-current="false" aria-label="Slide 3" data-carousel-slide-to="2"></button>
+                </div>
+                <!-- Slider controls -->
+                <button type="button"
+                    class="absolute top-0 left-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none"
+                    data-carousel-prev="">
+                    <span
+                        class="inline-flex items-center justify-center w-8 h-8 rounded-full sm:w-10 sm:h-10 bg-black/30 dark:bg-gray-800/30 group-hover:bg-black/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-black dark:group-focus:ring-gray-800/70 group-focus:outline-none">
+                        <svg aria-hidden="true" class="w-5 h-5 text-black sm:w-6 sm:h-6 dark:text-gray-800" fill="none"
+                            stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7">
+                            </path>
+                        </svg>
+                        <span class="sr-only">Previous</span>
+                    </span>
+                </button>
+                <button type="button"
+                    class="absolute top-0 right-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none"
+                    data-carousel-next="">
+                    <span
+                        class="inline-flex items-center justify-center w-8 h-8 rounded-full sm:w-10 sm:h-10 bg-black/30 dark:bg-gray-800/30 group-hover:bg-black/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-black dark:group-focus:ring-gray-800/70 group-focus:outline-none">
+                        <svg aria-hidden="true" class="w-5 h-5 text-black sm:w-6 sm:h-6 dark:text-gray-800" fill="none"
+                            stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7">
+                            </path>
+                        </svg>
+                        <span class="sr-only">Next</span>
+                    </span>
+                </button>
+            </div>
+            <h1 style="color: black; text-align: center;" class="mt-8 text-xl">Workshop on CUDA Programming</h1>
+            <p
+                class="max-w-full text-2xl text-center text-gray-700 md:text-center pt-1 pr-2 pb-14 event-info mt-8 px-10">
+                <span>
+                    This workshop was also one of the flagship events for us. <br>
+                    It entailed a lecture on the basics of CUDA programming
+                    and the basics of language extensions in it. <br> We consider this workshop to be a
+                    massive success with 122 students actively participating in it.
+
+                </span>
+            </p>
+        </div>
+    </section>
+
+    <section class="event1">
+        <div class="container mt-24 mx-auto">
+            <div id="default-carousel" class="relative" data-carousel="static">
+                <!-- Carousel wrapper -->
+                <div class="relative h-56 overflow-hidden hover:overflow-visible rounded-lg md:h-96">
+                    <!-- Item 1 -->
+                    <div class="duration-700 ease-in-out absolute inset-0 transition-all transform translate-x-0 z-20"
+                        data-carousel-item="">
+                        <span
+                            class="absolute text-2xl font-semibold text-black -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2 sm:text-3xl dark:text-gray-800">First
+                            Slide</span>
+                        <img src="{% static 'images/fullstack1.jpg' %}"
+                            class="absolute block w-auto -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
+                    </div>
+                    <!-- Item 2 -->
+                    <div class="duration-700 ease-in-out absolute inset-0 transition-all transform translate-x-full z-10"
+                        data-carousel-item="">
+                        <span
+                            class="absolute text-2xl font-semibold text-black -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2 sm:text-3xl dark:text-gray-800">Second
+                            Slide</span>
+                        <img src="{% static 'images/fullstack2.jpg' %}"
+                            class="absolute block w-auto -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
+                    </div>
+                    <!-- Item 3 -->
+                    <div class="duration-700 ease-in-out absolute inset-0 transition-all transform -translate-x-full z-10"
+                        data-carousel-item="">
+                        <span
+                            class="absolute text-2xl font-semibold text-black -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2 sm:text-3xl dark:text-gray-800">Third
+                            Slide</span>
+                        <img src="{% static 'images/fullstack3.jpg' %}"
+                            class="absolute block w-auto -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
+                    </div>
+                </div>
+                <!-- Slider indicators -->
+                <div class="absolute z-30 flex space-x-3 -translate-x-1/2 bottom-5 left-1/2">
+                    <button type="button" class="w-3 h-3 rounded-full bg-black dark:bg-gray-800" aria-current="true"
+                        aria-label="Slide 1" data-carousel-slide-to="0"></button>
+                    <button type="button"
+                        class="w-3 h-3 rounded-full bg-black/50 dark:bg-gray-800/50 hover:bg-black dark:hover:bg-gray-800"
+                        aria-current="false" aria-label="Slide 2" data-carousel-slide-to="1"></button>
+                    <button type="button"
+                        class="w-3 h-3 rounded-full bg-black/50 dark:bg-gray-800/50 hover:bg-black dark:hover:bg-gray-800"
+                        aria-current="false" aria-label="Slide 3" data-carousel-slide-to="2"></button>
+                </div>
+                <!-- Slider controls -->
+                <button type="button"
+                    class="absolute top-0 left-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none"
+                    data-carousel-prev="">
+                    <span
+                        class="inline-flex items-center justify-center w-8 h-8 rounded-full sm:w-10 sm:h-10 bg-black/30 dark:bg-gray-800/30 group-hover:bg-black/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-black dark:group-focus:ring-gray-800/70 group-focus:outline-none">
+                        <svg aria-hidden="true" class="w-5 h-5 text-black sm:w-6 sm:h-6 dark:text-gray-800" fill="none"
+                            stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7">
+                            </path>
+                        </svg>
+                        <span class="sr-only">Previous</span>
+                    </span>
+                </button>
+                <button type="button"
+                    class="absolute top-0 right-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none"
+                    data-carousel-next="">
+                    <span
+                        class="inline-flex items-center justify-center w-8 h-8 rounded-full sm:w-10 sm:h-10 bg-black/30 dark:bg-gray-800/30 group-hover:bg-black/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-black dark:group-focus:ring-gray-800/70 group-focus:outline-none">
+                        <svg aria-hidden="true" class="w-5 h-5 text-black sm:w-6 sm:h-6 dark:text-gray-800" fill="none"
+                            stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7">
+                            </path>
+                        </svg>
+                        <span class="sr-only">Next</span>
+                    </span>
+                </button>
+            </div>
+            <h1 style="color: black; text-align: center;" class="mt-8 text-xl">Seminar on Full Stack Web 3 Development
+            </h1>
+            <p
+                class="max-w-full text-2xl text-center text-gray-700 md:text-center pt-1 pr-2 pb-14 event-info mt-8 px-10">
+                <span>
+
+                    With the exponential rise in the number of websites for different purposes,
+                    this particular domain is booming like never before. <br>
+                    A full stack developer is the back-bone of web development. <br>
+                    Through this seminar, students were made acquainted with the basics,
+                    latest technologies and skills in web development.
+
+                </span>
+            </p>
+        </div>
+    </section>
+
+    <section class="event1">
+        <div class="container mt-24 mx-auto">
+            <div id="default-carousel" class="relative" data-carousel="static">
+                <!-- Carousel wrapper -->
+                <div class="relative h-56 overflow-hidden hover:overflow-visible rounded-lg md:h-96">
+                    <!-- Item 1 -->
+                    <div class="duration-700 ease-in-out absolute inset-0 transition-all transform translate-x-0 z-20"
+                        data-carousel-item="">
+                        <span
+                            class="absolute text-2xl font-semibold text-black -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2 sm:text-3xl dark:text-gray-800">First
+                            Slide</span>
+                        <img src="{% static 'images/cyber1.png' %}"
+                            class="absolute block w-auto -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
+                    </div>
+                    <!-- Item 2 -->
+                    <div class="duration-700 ease-in-out absolute inset-0 transition-all transform translate-x-full z-10"
+                        data-carousel-item="">
+                        <span
+                            class="absolute text-2xl font-semibold text-black -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2 sm:text-3xl dark:text-gray-800">Second
+                            Slide</span>
+                        <img src="{% static 'images/cyber2.png' %}"
+                            class="absolute block w-auto -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
+                    </div>
+                    <!-- Item 3 -->
+                    <!-- <div class="duration-700 ease-in-out absolute inset-0 transition-all transform -translate-x-full z-10" data-carousel-item="">
+                       <span class="absolute text-2xl font-semibold text-black -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2 sm:text-3xl dark:text-gray-800">Third Slide</span>
+                       <img src="./static/images/fullstack3.jpg" class="absolute block w-auto -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
+                   </div> -->
+                </div>
+                <!-- Slider indicators -->
+                <div class="absolute z-30 flex space-x-3 -translate-x-1/2 bottom-5 left-1/2">
+                    <button type="button" class="w-3 h-3 rounded-full bg-black dark:bg-gray-800" aria-current="true"
+                        aria-label="Slide 1" data-carousel-slide-to="0"></button>
+                    <button type="button"
+                        class="w-3 h-3 rounded-full bg-black/50 dark:bg-gray-800/50 hover:bg-black dark:hover:bg-gray-800"
+                        aria-current="false" aria-label="Slide 2" data-carousel-slide-to="1"></button>
+                    <!-- <button type="button" class="w-3 h-3 rounded-full bg-black/50 dark:bg-gray-800/50 hover:bg-black dark:hover:bg-gray-800" aria-current="false" aria-label="Slide 3" data-carousel-slide-to="2"></button> -->
+                </div>
+                <!-- Slider controls -->
+                <button type="button"
+                    class="absolute top-0 left-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none"
+                    data-carousel-prev="">
+                    <span
+                        class="inline-flex items-center justify-center w-8 h-8 rounded-full sm:w-10 sm:h-10 bg-black/30 dark:bg-gray-800/30 group-hover:bg-black/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-black dark:group-focus:ring-gray-800/70 group-focus:outline-none">
+                        <svg aria-hidden="true" class="w-5 h-5 text-black sm:w-6 sm:h-6 dark:text-gray-800" fill="none"
+                            stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7">
+                            </path>
+                        </svg>
+                        <span class="sr-only">Previous</span>
+                    </span>
+                </button>
+                <button type="button"
+                    class="absolute top-0 right-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none"
+                    data-carousel-next="">
+                    <span
+                        class="inline-flex items-center justify-center w-8 h-8 rounded-full sm:w-10 sm:h-10 bg-black/30 dark:bg-gray-800/30 group-hover:bg-black/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-black dark:group-focus:ring-gray-800/70 group-focus:outline-none">
+                        <svg aria-hidden="true" class="w-5 h-5 text-black sm:w-6 sm:h-6 dark:text-gray-800" fill="none"
+                            stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7">
+                            </path>
+                        </svg>
+                        <span class="sr-only">Next</span>
+                    </span>
+                </button>
+            </div>
+            <h1 style="color: black; text-align: center;" class="mt-8 text-xl">Hands-On Workshop on “Cyber Security”
+            </h1>
+            <p
+                class="max-w-full text-2xl text-center text-gray-700 md:text-center pt-1 pr-2 pb-14 event-info mt-8 px-10">
                 <span>Hands-On Workshop on “Cyber Security”
 
-                    This was another flagship event for us which was a hands-on workshop 
-                    conducted on ‘Cyber security’. <br> The workshop 
-                    touched on topics like cyber attacks and how to defend them, importance of cyber security, 
+                    This was another flagship event for us which was a hands-on workshop
+                    conducted on ‘Cyber security’. <br> The workshop
+                    touched on topics like cyber attacks and how to defend them, importance of cyber security,
                     safe internet browsing and much more…
-                    
-                    </span>
+
+                </span>
             </p>
-            </div>
-            </section>
+        </div>
+    </section>
 
-            <section class="event1">
-                <div class="container mt-24 mx-auto">
-                <div id="default-carousel" class="relative" data-carousel="static">
-                    <!-- Carousel wrapper -->
-                    <div class="relative h-56 overflow-hidden hover:overflow-visible rounded-lg md:h-96">
-                        <!-- Item 1 -->
-                       <div class="duration-700 ease-in-out absolute inset-0 transition-all transform translate-x-0 z-20" data-carousel-item="">
-                           <span class="absolute text-2xl font-semibold text-black -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2 sm:text-3xl dark:text-gray-800">First Slide</span>
-                           <img src="./static/images/reimagine1.png" class="absolute block w-auto -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
-                       </div>
-                       <!-- Item 2 -->
-                       <div class="duration-700 ease-in-out absolute inset-0 transition-all transform translate-x-full z-10" data-carousel-item="">
-                           <span class="absolute text-2xl font-semibold text-black -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2 sm:text-3xl dark:text-gray-800">Second Slide</span>
-                           <img src="./static/images/reimagine2.png" class="absolute block w-auto -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
-                       </div>
-                       <!-- Item 3 -->
-                       <div class="duration-700 ease-in-out absolute inset-0 transition-all transform -translate-x-full z-10" data-carousel-item="">
-                           <span class="absolute text-2xl font-semibold text-black -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2 sm:text-3xl dark:text-gray-800">Third Slide</span>
-                           <img src="./static/images/reimagine3.png" class="absolute block w-auto -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
-                       </div>
-                   </div>
-                    <!-- Slider indicators -->
-                    <div class="absolute z-30 flex space-x-3 -translate-x-1/2 bottom-5 left-1/2">
-                        <button type="button" class="w-3 h-3 rounded-full bg-black dark:bg-gray-800" aria-current="true" aria-label="Slide 1" data-carousel-slide-to="0"></button>
-                        <button type="button" class="w-3 h-3 rounded-full bg-black/50 dark:bg-gray-800/50 hover:bg-black dark:hover:bg-gray-800" aria-current="false" aria-label="Slide 2" data-carousel-slide-to="1"></button>
-                        <button type="button" class="w-3 h-3 rounded-full bg-black/50 dark:bg-gray-800/50 hover:bg-black dark:hover:bg-gray-800" aria-current="false" aria-label="Slide 3" data-carousel-slide-to="2"></button>
+    <section class="event1">
+        <div class="container mt-24 mx-auto">
+            <div id="default-carousel" class="relative" data-carousel="static">
+                <!-- Carousel wrapper -->
+                <div class="relative h-56 overflow-hidden hover:overflow-visible rounded-lg md:h-96">
+                    <!-- Item 1 -->
+                    <div class="duration-700 ease-in-out absolute inset-0 transition-all transform translate-x-0 z-20"
+                        data-carousel-item="">
+                        <span
+                            class="absolute text-2xl font-semibold text-black -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2 sm:text-3xl dark:text-gray-800">First
+                            Slide</span>
+                        <img src="{% static 'images/reimagine1.png' %}"
+                            class="absolute block w-auto -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
                     </div>
-                    <!-- Slider controls -->
-                    <button type="button" class="absolute top-0 left-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none" data-carousel-prev="">
-                        <span class="inline-flex items-center justify-center w-8 h-8 rounded-full sm:w-10 sm:h-10 bg-black/30 dark:bg-gray-800/30 group-hover:bg-black/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-black dark:group-focus:ring-gray-800/70 group-focus:outline-none">
-                            <svg aria-hidden="true" class="w-5 h-5 text-black sm:w-6 sm:h-6 dark:text-gray-800" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path></svg>
-                            <span class="sr-only">Previous</span>
-                        </span>
-                    </button>
-                    <button type="button" class="absolute top-0 right-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none" data-carousel-next="">
-                        <span class="inline-flex items-center justify-center w-8 h-8 rounded-full sm:w-10 sm:h-10 bg-black/30 dark:bg-gray-800/30 group-hover:bg-black/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-black dark:group-focus:ring-gray-800/70 group-focus:outline-none">
-                            <svg aria-hidden="true" class="w-5 h-5 text-black sm:w-6 sm:h-6 dark:text-gray-800" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
-                            <span class="sr-only">Next</span>
-                        </span>
-                    </button>
+                    <!-- Item 2 -->
+                    <div class="duration-700 ease-in-out absolute inset-0 transition-all transform translate-x-full z-10"
+                        data-carousel-item="">
+                        <span
+                            class="absolute text-2xl font-semibold text-black -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2 sm:text-3xl dark:text-gray-800">Second
+                            Slide</span>
+                        <img src="{% static 'images/reimagine2.png' %}"
+                            class="absolute block w-auto -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
+                    </div>
+                    <!-- Item 3 -->
+                    <div class="duration-700 ease-in-out absolute inset-0 transition-all transform -translate-x-full z-10"
+                        data-carousel-item="">
+                        <span
+                            class="absolute text-2xl font-semibold text-black -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2 sm:text-3xl dark:text-gray-800">Third
+                            Slide</span>
+                        <img src="{% static 'images/reimagine3.png' %}"
+                            class="absolute block w-auto -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
+                    </div>
                 </div>
-                <h1 style="color: black; text-align: center;" class="mt-8 text-xl">Reimagine 2022</h1>
-                <p class="max-w-full text-2xl text-center text-gray-700 md:text-center pt-1 pr-2 pb-14 event-info mt-8 px-10">
-                    <span>
-                        This was a UI/UX design competition which spanned over 5 days 
-                        wherein the participants brainstormed and worked upon 
-                        the problem statements provided to them to bag thrilling prizes.
-                        </span>
-                </p>
+                <!-- Slider indicators -->
+                <div class="absolute z-30 flex space-x-3 -translate-x-1/2 bottom-5 left-1/2">
+                    <button type="button" class="w-3 h-3 rounded-full bg-black dark:bg-gray-800" aria-current="true"
+                        aria-label="Slide 1" data-carousel-slide-to="0"></button>
+                    <button type="button"
+                        class="w-3 h-3 rounded-full bg-black/50 dark:bg-gray-800/50 hover:bg-black dark:hover:bg-gray-800"
+                        aria-current="false" aria-label="Slide 2" data-carousel-slide-to="1"></button>
+                    <button type="button"
+                        class="w-3 h-3 rounded-full bg-black/50 dark:bg-gray-800/50 hover:bg-black dark:hover:bg-gray-800"
+                        aria-current="false" aria-label="Slide 3" data-carousel-slide-to="2"></button>
                 </div>
-                </section>
+                <!-- Slider controls -->
+                <button type="button"
+                    class="absolute top-0 left-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none"
+                    data-carousel-prev="">
+                    <span
+                        class="inline-flex items-center justify-center w-8 h-8 rounded-full sm:w-10 sm:h-10 bg-black/30 dark:bg-gray-800/30 group-hover:bg-black/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-black dark:group-focus:ring-gray-800/70 group-focus:outline-none">
+                        <svg aria-hidden="true" class="w-5 h-5 text-black sm:w-6 sm:h-6 dark:text-gray-800" fill="none"
+                            stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7">
+                            </path>
+                        </svg>
+                        <span class="sr-only">Previous</span>
+                    </span>
+                </button>
+                <button type="button"
+                    class="absolute top-0 right-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none"
+                    data-carousel-next="">
+                    <span
+                        class="inline-flex items-center justify-center w-8 h-8 rounded-full sm:w-10 sm:h-10 bg-black/30 dark:bg-gray-800/30 group-hover:bg-black/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-black dark:group-focus:ring-gray-800/70 group-focus:outline-none">
+                        <svg aria-hidden="true" class="w-5 h-5 text-black sm:w-6 sm:h-6 dark:text-gray-800" fill="none"
+                            stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7">
+                            </path>
+                        </svg>
+                        <span class="sr-only">Next</span>
+                    </span>
+                </button>
+            </div>
+            <h1 style="color: black; text-align: center;" class="mt-8 text-xl">Reimagine 2022</h1>
+            <p
+                class="max-w-full text-2xl text-center text-gray-700 md:text-center pt-1 pr-2 pb-14 event-info mt-8 px-10">
+                <span>
+                    This was a UI/UX design competition which spanned over 5 days
+                    wherein the participants brainstormed and worked upon
+                    the problem statements provided to them to bag thrilling prizes.
+                </span>
+            </p>
+        </div>
+    </section>
 
-            <!-- Footer -->
+    <!-- Footer -->
     <footer>
         <!-- Flex Container -->
         <div class="container flex flex-col justify-between px-6 py-2 mx-auto space-y-8 md:flex-row md:space-y-0 mt-10">
 
-          <!-- Logo 1 -->
-          <div class="flex justify-center items-center">
-            <img src="./static/images/CSI_logo.png" alt="" style="width: 95px; height: 96px">
-          </div>
-          
-          <!-- Address -->
-          <div class="text-center md:text-left md:max-w-xs">
-            <div id="text1">
-            Address:
-            <br><br>
-              Sr.No. 18, Plot No. 5/3, CTS No.205,
-              Near Millenium School, behind Vandevi Temple,
-              Karve Nagar, Pune,
-              Maharashtra 411052,
-              India
-            <br><br>
-            Phone: 020 2547 9811
+            <!-- Logo 1 -->
+            <div class="flex justify-center items-center">
+                <img src="{% static 'images/CSI_logo.png' %}" alt="" style="width: 95px; height: 96px">
             </div>
-          </div>
-          
-          <!-- Contact Us -->
-          <div class="space-y-4">
-            <div class="text-center" id="text1">Contact With Us</div>
-            <div class="flex justify-center space-x-4">
-              <a href="#">
-                <img src="./static/images/facebook.svg" alt="" class="h-8" />
-              </a>
-              <a href="#">
-                <img src="./static/images/youtube.svg" alt="" class="h-8" />
-              </a>
-              <a href="#">
-                <img src="./static/images/gmail.svg" alt="" class="h-8" />
-              </a>
-            </div>
-            <div class="flex justify-center space-x-4">
-              <a href="#">
-                <img src="./static/images/linkedin.svg" alt="" class="h-8" />
-              </a>
-              <a href="#">
-                <img src="./static/images/twitter.svg" alt="" class="h-8" />
-              </a>
-              <a href="#">
-                <img src="./static/images/instagram.svg" alt="" class="h-8" />
-              </a>
-            </div>
-          </div>
 
-          <!-- Logo 2 -->
-          <div class="flex justify-center items-center">
-            <img src="./static/images/mmcoe_logo.jpg" alt="">
-          </div>
+            <!-- Address -->
+            <div class="text-center md:text-left md:max-w-xs">
+                <div id="text1">
+                    Address:
+                    <br><br>
+                    Sr.No. 18, Plot No. 5/3, CTS No.205,
+                    Near Millenium School, behind Vandevi Temple,
+                    Karve Nagar, Pune,
+                    Maharashtra 411052,
+                    India
+                    <br><br>
+                    Phone: 020 2547 9811
+                </div>
+            </div>
+
+            <!-- Contact Us -->
+            <div class="space-y-4">
+                <div class="text-center" id="text1">Contact With Us</div>
+                <div class="flex justify-center space-x-4">
+                    <a href="#">
+                        <img src="./static/images/facebook.svg" alt="" class="h-8" />
+                    </a>
+                    <a href="#">
+                        <img src="./static/images/youtube.svg" alt="" class="h-8" />
+                    </a>
+                    <a href="#">
+                        <img src="./static/images/gmail.svg" alt="" class="h-8" />
+                    </a>
+                </div>
+                <div class="flex justify-center space-x-4">
+                    <a href="#">
+                        <img src="./static/images/linkedin.svg" alt="" class="h-8" />
+                    </a>
+                    <a href="#">
+                        <img src="./static/images/twitter.svg" alt="" class="h-8" />
+                    </a>
+                    <a href="#">
+                        <img src="./static/images/instagram.svg" alt="" class="h-8" />
+                    </a>
+                </div>
+            </div>
+
+            <!-- Logo 2 -->
+            <div class="flex justify-center items-center">
+                <img src="./static/images/mmcoe_logo.jpg" alt="">
+            </div>
     </footer>
 
 
-        <script src="js/script.js"></script>
-        <script src="https://unpkg.com/flowbite@1.5.2/dist/flowbite.js"></script>
+    <script src="js/script.js"></script>
+    <script src="https://unpkg.com/flowbite@1.5.2/dist/flowbite.js"></script>
 </body>
+
 </html>

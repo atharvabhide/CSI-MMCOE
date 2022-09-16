@@ -1,202 +1,198 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/main.css">
-    <link rel="stylesheet" href="css/home.css">
-    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
-    <title>Home</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="{% static 'main.css' %}">
+  <link rel="stylesheet" href="{% static 'home.css' %}">
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+  <title>Home</title>
 </head>
 
 <body>
-        <!-- Navbar -->
-        <nav class="relative container mx-auto p-2">
-          <!-- Container -->
-          <div class="flex items-center justify-between">
-              <!-- CSI logo -->
-              <div class="flex flex-row space-x-10 pt-2 pl-8">
-                  <a href="index.html">
-                  <img src="./static/images/CSI_logo.png" alt="" style="width: 95px; height: 96px">
-                  </a>
-                  <a href="https://www.mmcoe.edu.in/" target="_blank">
-                  <img src="./static/images/mmcoe_logo-2.png" alt="">
-                  </a>
-              </div>
-              <!-- Menu items -->
-              <div class="hidden md:flex space-x-12 pr-10">
-    <!-- <<<<<<< HEAD -->
-                  <a href="index.html" class="navlinks">Home</a>
-                  <a href="about.html" class="navlinks">About</a>
-                  <a href="events.html" class="navlinks">Events</a>
-                  <a href="current_event.html" class="navlinks">Special Event</a>
-                  <a href="contact.html" class="navlinks">Contact Us</a>
-    <!-- >>>>>>> 5cea7fa99dec351fa330556d22645cc859fe988d -->
-              </div>
-    
-              <button
-            id="menu-btn"
-            class="block hamburger md:hidden focus:outline-none"
-          >
-            <span class="hamburger-top"></span>
-            <span class="hamburger-middle"></span>
-            <span class="hamburger-bottom"></span>
-          </button>
-          </div>
-                <!-- Mobile Menu -->
-        <div class="md:hidden" style="position:relative; z-index: 999;">
-          <div
-            id="menu"
-            class="absolute flex-col items-center hidden self-end py-8 mt-10 space-y-6 font-bold bg-white sm:w-auto sm:self-center left-6 right-6 drop-shadow-md"
-          >
-          <a href="index.html" class="navlinks">Home</a>
-          <a href="about.html" class="navlinks">About</a>
-          <a href="events.html" class="navlinks">Event</a>
-          <a href="current_event.html" class="navlinks">Special Event</a>
-          <a href="contact.html" class="navlinks">Contact Us</a>
-          </div>
+  <!-- Navbar -->
+  <nav class="relative container mx-auto p-2">
+    <!-- Container -->
+    <div class="flex items-center justify-between">
+      <!-- CSI logo -->
+      <div class="flex flex-row space-x-10 pt-2 pl-8">
+        <a href="/">
+          <img src="./static/images/CSI_logo.png" alt="" style="width: 95px; height: 96px">
+        </a>
+        <a href="https://www.mmcoe.edu.in/" target="_blank">
+          <img src="./static/images/mmcoe_logo-2.png" alt="">
+        </a>
+      </div>
+      <!-- Menu items -->
+      <div class="hidden md:flex space-x-12 pr-10">
+        <!-- <<<<<<< HEAD -->
+        <a href="/" class="navlinks">Home</a>
+        <a href="about" class="navlinks">About</a>
+        <a href="events" class="navlinks">Events</a>
+        <a href="current_event" class="navlinks">Special Event</a>
+        <a href="contact" class="navlinks">Contact Us</a>
+        <!-- >>>>>>> 5cea7fa99dec351fa330556d22645cc859fe988d -->
+      </div>
+
+      <button id="menu-btn" class="block hamburger md:hidden focus:outline-none">
+        <span class="hamburger-top"></span>
+        <span class="hamburger-middle"></span>
+        <span class="hamburger-bottom"></span>
+      </button>
+    </div>
+    <!-- Mobile Menu -->
+    <div class="md:hidden" style="position:relative; z-index: 999;">
+      <div id="menu"
+        class="absolute flex-col items-center hidden self-end py-8 mt-10 space-y-6 font-bold bg-white sm:w-auto sm:self-center left-6 right-6 drop-shadow-md">
+        <a href="/" class="navlinks">Home</a>
+        <a href="about" class="navlinks">About</a>
+        <a href="events" class="navlinks">Event</a>
+        <a href="current_event" class="navlinks">Special Event</a>
+        <a href="contact" class="navlinks">Contact Us</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section id="hero">
+    <!-- Flex container -->
+    <div
+      class="container flex justify-end flex-col-reverse md:flex-row items-center px-6 mx-auto mt-10 space-y-0 md:space-y-0">
+      <div class="flex flex-col mb-32 space-y-12 md:w-1/2 items-end">
+        <h1 class="max-w-full text-4xl font-bold text-center md:text-5xl md:text-right pt-40 pr-2">
+          <span>CSI STUDENT'S CHAPTER</span>
+        </h1>
+        <p class="max-w-full text-3xl text-center text-darkGrayishBlue md:text-center pt-24 pr-2">
+          <span>"Engineer</span>
+          <span>Solve</span>
+          <span>Problems.</span>
+          <br>
+          <span>If</span>
+          <span>there</span>
+          <span>are</span>
+          <span>no</span>
+          <span>problems</span>
+          <span>handily</span>
+          <span>available,</span>
+          <span>they</span>
+          <span>will</span>
+          <span>create</span>
+          <span>their</span>
+          <span>own</span>
+          <span>problems."</span>
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="info">
+    <div class="container mt-10 mx-auto" data-aos="flip-left">
+      <div class="flex flex-col mb-32 space-y-12 items-center">
+        <h1 class="max-w-full text-4xl font-bold text-center md:text-5xl md:text-right pt-14">
+          <span>What is CSI?</span>
+        </h1>
+        <p class="max-w-full text-2xl text-center text-darkGrayishBlue md:text-center pt-1 pr-2 pb-14">
+          <span>Computer Society of India is a body of computer professionals in India. <br>
+            It was started on 6 March 1965 by a few computer professionals
+            and has now grown to be the national body representing computer professionals. <br>
+            It is a non-profit professional meet to exchange views and
+            information to learn and share ideas. <span>
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="about -mt-16">
+    <div class="container mt-10 mx-auto" data-aos="flip-left">
+      <div class="flex flex-col mb-32 space-y-12 items-center">
+        <h1 class="max-w-full text-4xl font-bold text-center md:text-5xl md:text-right pt-14">
+          <span>About CSI MMCOE</span>
+        </h1>
+        <p class="max-w-full text-2xl text-center text-darkGrayishBlue md:text-center pt-1 pr-2 pb-14">
+          <span>We conduct various technical webinars, workshops, hackathons
+            which were aimed at moulding the participants
+            more adept with their technical skills. <br>
+            We are ecstatic and proudly say that we carried them out
+            successfully with many feathers in our cap.</span>
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <!-- Flex Container -->
+    <div class="container flex flex-col justify-between px-6 py-2 mx-auto space-y-8 md:flex-row md:space-y-0">
+
+      <!-- Logo 1 -->
+      <div class="flex justify-center items-center">
+        <a href="/">
+          <img src="./static/images/CSI_logo.png" alt="" style="width: 95px; height: 96px">
+        </a>
+      </div>
+
+      <!-- Address -->
+      <div class="text-center md:text-left md:max-w-xs">
+        <p id="text1">
+          Address:
+          <br><br>
+          Sr.No. 18, Plot No. 5/3, CTS No.205,
+          Near Millenium School, behind Vandevi Temple,
+          Karve Nagar, Pune,
+          Maharashtra 411052,
+          India
+          <br><br>
+          Phone: 020 2547 9811
+        </p>
+      </div>
+
+      <!-- Contact Us -->
+      <div class="space-y-4">
+        <div class="text-center" id="text1">Contact With Us</div>
+        <div class="flex justify-center space-x-4">
+          <a href="#">
+            <img src="./static/images/facebook.svg" alt="" class="h-8" />
+          </a>
+          <a href="#">
+            <img src="./static/images/youtube.svg" alt="" class="h-8" />
+          </a>
+          <a href="#">
+            <img src="./static/images/gmail.svg" alt="" class="h-8" />
+          </a>
         </div>
-      </nav>
-
-    <!-- Hero Section -->
-    <section id="hero">
-        <!-- Flex container -->
-        <div
-            class="container flex justify-end flex-col-reverse md:flex-row items-center px-6 mx-auto mt-10 space-y-0 md:space-y-0">
-            <div class="flex flex-col mb-32 space-y-12 md:w-1/2 items-end">
-                <h1 class="max-w-full text-4xl font-bold text-center md:text-5xl md:text-right pt-40 pr-2">
-                    <span>CSI STUDENT'S CHAPTER</span>
-                </h1>
-                <p class="max-w-full text-3xl text-center text-darkGrayishBlue md:text-center pt-24 pr-2">
-                    <span>"Engineers</span>
-                    <span>Solve</span>
-                    <span>Problems.</span>
-                    <br>
-                    <span>If</span>
-                    <span>there</span>
-                    <span>are</span>
-                    <span>no</span>
-                    <span>problems</span>
-                    <span>handily</span>
-                    <span>available,</span>
-                    <span>they</span>
-                    <span>will</span>
-                    <span>create</span>
-                    <span>their</span>
-                    <span>own</span>
-                    <span>problems."</span>
-                </p>
-            </div>
+        <div class="flex justify-center space-x-4">
+          <a href="#">
+            <img src="./static/images/linkedin.svg" alt="" class="h-8" />
+          </a>
+          <a href="#">
+            <img src="./static/images/twitter.svg" alt="" class="h-8" />
+          </a>
+          <a href="#">
+            <img src="./static/images/instagram.svg" alt="" class="h-8" />
+          </a>
         </div>
-    </section>
+      </div>
 
-    <section class="info">
-        <div class="container mt-10 mx-auto" data-aos="flip-left">
-            <div class="flex flex-col mb-32 space-y-12 items-center">
-                <h1 class="max-w-full text-4xl font-bold text-center md:text-5xl md:text-right pt-14">
-                    <span>What is CSI?</span>
-                </h1>
-                <p class="max-w-full text-2xl text-center text-darkGrayishBlue md:text-center pt-1 pr-2 pb-14">
-                    <span>Computer Society of India is a body of computer professionals in India. <br>
-                        It was started on 6 March 1965 by a few computer professionals
-                        and has now grown to be the national body representing computer professionals. <br>
-                        It is a non-profit professional meet to exchange views and
-                        information to learn and share ideas. <span>
-                </p>
-            </div>
-        </div>
-    </section>
+      <!-- Logo 2 -->
+      <div class="flex justify-center items-center">
+        <a href="https://www.mmcoe.edu.in/" target="_blank">
+          <img src="./static/images/mmcoe_logo.jpg" alt="">
+        </a>
+      </div>
+  </footer>
 
-    <section class="about -mt-16">
-        <div class="container mt-10 mx-auto" data-aos="flip-left">
-            <div class="flex flex-col mb-32 space-y-12 items-center">
-                <h1 class="max-w-full text-4xl font-bold text-center md:text-5xl md:text-right pt-14">
-                    <span>About CSI MMCOE</span>
-                </h1>
-                <p class="max-w-full text-2xl text-center text-darkGrayishBlue md:text-center pt-1 pr-2 pb-14">
-                    <span>We conduct various technical webinars, workshops, hackathons
-                        which were aimed at moulding the participants
-                        more adept with their technical skills. <br>
-                        We are ecstatic and proudly say that we carried them out
-                        successfully with many feathers in our cap.</span>
-                </p>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer>
-        <!-- Flex Container -->
-        <div class="container flex flex-col justify-between px-6 py-2 mx-auto space-y-8 md:flex-row md:space-y-0">
-
-          <!-- Logo 1 -->
-          <div class="flex justify-center items-center">
-            <a href="index.html">
-              <img src="./static/images/CSI_logo.png" alt="" style="width: 95px; height: 96px">
-            </a>
-          </div>
-          
-          <!-- Address -->
-          <div class="text-center md:text-left md:max-w-xs">
-            <p id="text1">
-            Address:
-            <br><br>
-              Sr.No. 18, Plot No. 5/3, CTS No.205,
-              Near Millenium School, behind Vandevi Temple,
-              Karve Nagar, Pune,
-              Maharashtra 411052,
-              India
-            <br><br>
-            Phone: 020 2547 9811
-            </p>
-          </div>
-          
-          <!-- Contact Us -->
-          <div class="space-y-4">
-            <div class="text-center" id="text1">Contact With Us</div>
-            <div class="flex justify-center space-x-4">
-              <a href="#">
-                <img src="./static/images/facebook.svg" alt="" class="h-8" />
-              </a>
-              <a href="#">
-                <img src="./static/images/youtube.svg" alt="" class="h-8" />
-              </a>
-              <a href="#">
-                <img src="./static/images/gmail.svg" alt="" class="h-8" />
-              </a>
-            </div>
-            <div class="flex justify-center space-x-4">
-              <a href="#">
-                <img src="./static/images/linkedin.svg" alt="" class="h-8" />
-              </a>
-              <a href="#">
-                <img src="./static/images/twitter.svg" alt="" class="h-8" />
-              </a>
-              <a href="#">
-                <img src="./static/images/instagram.svg" alt="" class="h-8" />
-              </a>
-            </div>
-          </div>
-
-          <!-- Logo 2 -->
-          <div class="flex justify-center items-center">
-            <a href="https://www.mmcoe.edu.in/" target="_blank">
-            <img src="./static/images/mmcoe_logo.jpg" alt="">
-            </a>
-          </div>
-    </footer>
-
-    <!-- Hamburger menu js -->
-    <script src="js/script.js"></script>
-    <!-- for AOS -->
-    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-    <script>
-        AOS.init({
-            offset: 300
-        });
-    </script>
+  <!-- Hamburger menu js -->
+  <script src="js/script.js"></script>
+  <!-- for AOS -->
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      offset: 300
+    });
+  </script>
 </body>
 
 </html>

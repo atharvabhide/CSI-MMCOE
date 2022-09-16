@@ -5,9 +5,9 @@ def event(request):
     events_list = list(csi_Event.objects.all())
     return render(request, 'events.html', { 'events_list' : events_list })
 
-def spEvent(request):
+def currEvent(request):
     curr_event = list(csi_Event.objects.all())[-1]
-    return render(request, 'special_events.html', { 'curr_event' : curr_event })
+    return render(request, 'current_event.html', { 'curr_event' : curr_event })
 
 def contactUs(request):
-    return render(request, 'contact_us.html')
+    return render(request, 'contact.html')
