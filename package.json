@@ -1,0 +1,27 @@
+{
+  "name": "csi-mmcoe",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "tailwindcss -i ./input.css -o ./css/main.css",
+    "watch": "tailwindcss -i ./input.css -o ./css/main.css --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/atharvabhide/CSI-MMCOE.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/atharvabhide/CSI-MMCOE/issues"
+  },
+  "homepage": "https://github.com/atharvabhide/CSI-MMCOE#readme",
+  "devDependencies": {
+    "tailwindcss": "^3.1.8"
+  },
+  "dependencies": {
+    "flowbite": "^1.5.2"
+  }
+}
