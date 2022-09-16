@@ -1,0 +1,11 @@
+{% extends '1_base.html' %} {% block content %}
+<h1>Events Page</h1>
+{% load static %}
+{% static "images" as baseUrl %}
+{% for event in events_list %}
+<h3>Name: {{event.event_name}}</h3>
+<img src="{{event.event_image.url}}" width="300" height="300" />
+<p>About: {{event.event_description}}</p>
+<br>
+{% endfor %}
+{% endblock %}

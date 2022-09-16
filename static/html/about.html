@@ -1,0 +1,16 @@
+{% extends '1_base.html' %} {% block content %}
+
+{% load static %}
+{% static "images" as baseUrl %}
+<h1>About Page</h1>
+<table>
+    {% for member in member_list %}
+    <br>
+    <img src="{{member.member_image.url}}" width="120" height="120" />
+    <h3>{{member.member_name}}</h3>
+    <h3>{{member.member_position}}</h3>
+    <a href={{member.member_linkedIn}}>LinkedIn</a>
+    <a href={{member.member_github}}>Github</a>
+    {% endfor %}
+</table>
+{% endblock %}

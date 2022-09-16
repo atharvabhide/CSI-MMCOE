@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap');
+nav
+{
+    background: linear-gradient(180deg, rgba(55, 146, 169, 0.5) 8.33%, rgba(55, 146, 169, 0.5) 22.4%, rgba(27, 109, 249, 0) 99.99%, rgba(47, 113, 225, 0) 100%);
+    border: 1px solid #8C7D7D;
+    box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);  
+    margin-bottom: -2.5rem;
+}
+
+.container
+{
+    max-width: 100%;
+}
+
+footer
+{
+    background: #3792A9;
+}
+
+#text1
+{
+    font-family: 'Inter';
+    font-style: italic;
+    font-weight: 700;
+    text-transform: capitalize;
+
+    color: #FFFFFF;
+}
+
+#text_header
+{
+    font-family: 'Verdana';
+    font-style: normal;
+    font-weight: 700;
+    text-transform: capitalize;
+    color: #3792A9;
+}
+
+#text_name
+{
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 300;
+
+    color: #000000;
+}
+
+#text_title
+{
+    font-family: 'Verdana';
+    font-style: normal;
+    font-weight: 700;
+
+    color: #000000;
+}
+
+#text_content
+{
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 300;
+
+    color: #000000;
+}
+
+.card
+{
+    background: #F1FAFF;
+}
+
+a {
+    display: inline-block;
+    position: relative;
+    color: 
+  black;
+  }
+  
+  a:after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: 
+  #0087ca;
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+  }
+  
+  a:hover:after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+  }
+
+  body
+  {
+    background: url("../static/images/BackgroundImage.jpeg") no-repeat;
+    background-attachment: fixed;
+  }
+
+  .about .container h1
+{
+    font-family: 'Verdana';
+    font-style: normal;
+    font-weight: 700;
+    text-transform: capitalize;
+    color: #3792A9;
+    mix-blend-mode: normal;
+}
+.about .container p
+{
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 300;
+    text-transform: capitalize;
+    color: #000000;
+    mix-blend-mode: normal;
+}
+.about .container
+{
+    max-width: 90%;
+}
+.about .container
+{
+    background: #F1FAFF;
+    box-shadow: 6px 8px 9px 1px rgba(0, 0, 0, 0.25);
+    border-radius: 47px;
+}
