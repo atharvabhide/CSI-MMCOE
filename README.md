@@ -13,13 +13,13 @@ npm install
 Run the Tailwind CLI to compile the **input.css** during development. The output file is **css/main.css**
 
 ```
-npm run watch
+npm run build
 ```
 
 To build once run...
 
 ```
-npm run build
+npm run watch
 ```
 
 To run website
