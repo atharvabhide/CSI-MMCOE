@@ -3,7 +3,7 @@
     font-family: 'Verdana';
     font-style: normal;
     font-weight: 700;
-    text-transform: capitalize;
+    /* text-transform: capitalize; */
     color: #3792A9;
     mix-blend-mode: normal;
 }
@@ -12,7 +12,7 @@
     font-family: 'Lato';
     font-style: normal;
     font-weight: 300;
-    text-transform: capitalize;
+    /* text-transform: capitalize; */
     color: #000000;
     mix-blend-mode: normal;
 }
