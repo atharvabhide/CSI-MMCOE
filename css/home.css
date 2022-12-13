@@ -20,7 +20,7 @@ nav
     font-family: 'Verdana';
     font-style: normal;
     font-weight: 700;
-    text-transform: capitalize;
+    /* text-transform: capitalize; */
     color: #3792A9;
     mix-blend-mode: normal;
 }
@@ -29,7 +29,7 @@ nav
     font-family: 'Lato';
     font-style: normal;
     font-weight: 300;
-    text-transform: capitalize;
+    /* text-transform: capitalize; */
     color: #000000;
     mix-blend-mode: normal;
 }
@@ -43,7 +43,7 @@ body
     font-family: 'Verdana';
     font-style: normal;
     font-weight: 700;
-    text-transform: capitalize;
+    /* text-transform: capitalize; */
     color: #3792A9;
     mix-blend-mode: normal;
 }
@@ -52,7 +52,7 @@ body
     font-family: 'Lato';
     font-style: normal;
     font-weight: 300;
-    text-transform: capitalize;
+    /* text-transform: capitalize; */
     color: #000000;
     mix-blend-mode: normal;
 }
@@ -67,7 +67,7 @@ body
     font-family: 'Verdana';
     font-style: normal;
     font-weight: 700;
-    text-transform: capitalize;
+    /* text-transform: capitalize; */
     color: #3792A9;
     mix-blend-mode: normal;
 }
@@ -76,7 +76,7 @@ body
     font-family: 'Lato';
     font-style: normal;
     font-weight: 300;
-    text-transform: capitalize;
+    /* text-transform: capitalize; */
     color: #000000;
     mix-blend-mode: normal;
 }
@@ -235,7 +235,7 @@ a:hover:after {
     font-weight: 700;
     /* font-size: 21px;
     line-height: 25px; */
-    text-transform: capitalize;
+    /* text-transform: capitalize; */
 
     color: #FFFFFF;
 }
