@@ -1,6 +1,7 @@
 <img src = "https://github.com/atharvabhide/CSI-MMCOE/blob/main/static/images/CSI_logo.png" height="100" width="100"></img>
 # CSI-MMCOE
 
+Website url: https://csi-mmcoe.org/
 
 # Usage
 
@@ -27,3 +28,4 @@ To run website
 ```
 python manage.py runserver
 ```
+
