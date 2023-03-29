@@ -29,3 +29,4 @@ To run website
 python manage.py runserver
 ```
 
+![image](https://user-images.githubusercontent.com/67187699/228642404-d726f886-6b91-4dc5-b9b8-26b5f2044f83.png)
